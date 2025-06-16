@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Jogo da Velha</title>
+</head>
+
+<body>
+
+    <!-- Seletor de idioma externo -->
+    <div class="language-selector-external">
+        <button id="lang-pt" class="lang-btn-external active" data-lang="pt">
+            <i class="fa-solid fa-globe lang-icon"></i>
+            <span class="lang-text-external">PT</span>
+        </button>
+        <button id="lang-en" class="lang-btn-external" data-lang="en">
+            <i class="fa-solid fa-globe lang-icon"></i>
+            <span class="lang-text-external">EN</span>
+        </button>
+    </div>
+
+    <!-- TELA INICIAL -->
+    <section id="initial-screen" class="game-container">
+        <header>
+            <h1 id="initial-title">Jogo da Velha</h1>
+            <p id="initial-subtitle">Escolha o modo de jogo</p>
+        </header>
+
+        <div class="mode-selection">
+            <button id="select-human" class="mode-card">
+                <div class="mode-card-icon">
+                    <i class="fa-solid fa-users"></i>
+                </div>
+                <h3 id="mode-human-title">2 Jogadores</h3>
+                <p id="mode-human-desc">Jogue contra um amigo</p>
+            </button>
+
+            <button id="select-computer" class="mode-card">
+                <div class="mode-card-icon">
+                    <i class="fa-solid fa-robot"></i>
+                </div>
+                <h3 id="mode-computer-title">vs Computador</h3>
+                <p id="mode-computer-desc">Desafie a inteligência artificial</p>
+            </button>
+        </div>
+    </section>
+
+    <!-- TELA DE JOGO -->
+    <section id="game-screen" class="game-container" style="display: none;">
+        <header>
+            <div class="game-header">
+                <button id="back-to-menu" class="back-btn">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </button>
+                <h1 id="game-title">Jogo da Velha</h1>
+                <div class="game-mode-indicator">
+                    <span id="current-mode-text">2 Jogadores</span>
+                </div>
+            </div>
+
+            <!-- Seção de estatísticas -->
+            <div class="stats-section">
+                <h3 id="stats-title">Placar</h3>
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-regular fa-circle stat-icon-o"></i>
+                        </div>
+                        <div class="stat-label" id="player-o-label">Jogador O</div>
+                        <div class="stat-value" id="wins-o">0</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-solid fa-handshake stat-icon-draw"></i>
+                        </div>
+                        <div class="stat-label" id="draws-label">Empates</div>
+                        <div class="stat-value" id="draws">0</div>
+                    </div>
+
+                    <div class="stat-item">
+                        <div class="stat-icon">
+                            <i class="fa-regular fa-x stat-icon-x"></i>
+                        </div>
+                        <div class="stat-label" id="player-x-label">Jogador X</div>
+                        <div class="stat-value" id="wins-x">0</div>
+                    </div>
+                </div>
+
+                <button id="reset-stats-btn" class="btn-reset-stats">
+                    <span id="reset-stats-text">🗑️ Limpar Placar</span>
+                </button>
+            </div>
+
+            <div class="game-info">
+                <p id="current-player">Vez do Jogador: O</p>
+            </div>
+        </header>
+
+        <!-- Tabuleiro -->
+        <div class="stage">
+            <div class="row">
+                <div id="0" class="square"></div>
+                <div id="1" class="square"></div>
+                <div id="2" class="square"></div>
+            </div>
+
+            <div class="row">
+                <div id="3" class="square"></div>
+                <div id="4" class="square"></div>
+                <div id="5" class="square"></div>
+            </div>
+
+            <div class="row">
+                <div id="6" class="square"></div>
+                <div id="7" class="square"></div>
+                <div id="8" class="square"></div>
+            </div>
+        </div>
+
+        <!-- Botões de controle -->
+        <div class="game-controls">
+            <button id="new-game-btn" class="btn-new-game" style="display: none;">
+                <span id="new-game-text">🎮 Novo Jogo</span>
+            </button>
+        </div>
+    </section>
+
+    <script src="./scripts/translations.js"></script>
+    <script src="./scripts/game.js"></script>
+    <script src="./scripts/interface.js"></script>
+
+</body>
+
+</html>
