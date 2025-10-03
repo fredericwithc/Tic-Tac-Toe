@@ -38,7 +38,9 @@ Technologies
 - JavaScript
 
 Contact
+
 Frederic Leyenberger
+
 - Linkedin: https://www.linkedin.com/in/frederic-leyenberger/
 
 ------------------------------------------------------------------------------------------
@@ -83,5 +85,7 @@ Tecnologias Utilizadas
 - JavaScript
 
 Contato
+
 Frederic Leyenberger
+
 - Linkedin: https://www.linkedin.com/in/frederic-leyenberger/
